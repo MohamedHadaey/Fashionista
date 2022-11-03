@@ -1,5 +1,23 @@
 .navbar {
   overflow: hidden;
+
+  #canvas {
+    display: none ;
+    width: 40px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+
+    span {
+      font-size: 20px;
+      color: #888 !important;
+      transition: all 0.3s;
+
+      &:hover {
+        color: #61dafb !important
+      }
+    }
+  }
   .navbar-brand {
     color: #61dafb;
     font-weight: 500;
@@ -59,6 +77,87 @@
       }
     }
   }
+
+  .offcanvas {
+    width: 200px;
+    overflow-x: hidden;
+
+    .offcanvas-body {
+      background-color: #fafafa;
+      padding: 0;
+      ul {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+
+        li {
+          width: 100%;
+          display: flex;
+          align-items: center;
+          padding: 5px 10px;
+          transition: all 0.3s;
+
+          &:hover {
+            cursor: pointer;
+            background-color: #f1f1f1;
+            color: #61dafb;
+            h6 {
+              transform: translateX(3px);
+            }
+          }
+
+          span {
+            font-size: 20px;
+            margin: 5px 25px;
+          }
+
+          h6 {
+            font-size: 18px;
+            font-weight: bold;
+            padding-top: 10px;
+            transition: transform 0.5s;
+          }
+
+          // img {
+          //   width: 25px;
+          //   margin: 5px 25px;
+          // }
+        }
+
+        li>img {
+          width: 25px;
+            margin: 5px 25px;
+        }
+      }
+
+      .dropdown-menu {
+        width: 75%;
+        margin: auto !important;
+        overflow: hidden;
+        border: none;
+        li{
+          &:hover{
+            cursor: pointer;
+          }
+          a{
+            transition: all 0.5s;
+            border-radius: 10px;
+            &:hover{
+              transform: translateX(2px);
+              background-color: #c0dcf8 !important;
+             }
+
+
+             img{
+              width: 30px !important;
+              margin: 0;
+             }
+          }
+
+        }
+      }
+    }
+  }
 }
 
 
@@ -68,6 +167,12 @@
 
 /* start small screen */
 @media screen and (max-width:576px) {
+  #canvas {
+    display: block !important;
+  }
+  .collapse, #toggler {
+    display: none;
+  }
   .navbar {
     .navbar-brand {
       font-size: 18px;
@@ -83,6 +188,12 @@
         }
       }
     }
+  }
+}
+
+@media screen and (min-width:576px) {
+  .offcanvas {
+    display: none !important;
   }
 }
 /* end small screen */

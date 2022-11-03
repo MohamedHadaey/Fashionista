@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=El+Messiri:wght@400;500;700&family=Montserrat+Alternates:wght@200;300;400;500;700&display=swap');
 
 
 * {
@@ -7,6 +7,26 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+:root {
+  --scrollBarBg: #aaa;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* the handle style */
+::-webkit-scrollbar-track {
+  background-color: #eee;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollBarBg);
+  border-radius: 15px;
+}
+
 
 body {
   background-color:rgb(242, 242, 242) !important;
@@ -24,3 +44,26 @@ ul {
   list-style: none;
 }
 
+.fa-facebook:hover {
+  color: #0a6daa!important;
+}
+
+.fa-instagram:hover {
+  color: #f0d!important;
+}
+
+.fa-twitter:hover {
+  color: #1da1f2!important;
+}
+
+.fa-pinterest:hover {
+  color: #dd4141!important;
+}
+
+.fa-youtube:hover {
+  color: #c71515!important;
+}
+
+.fa-linkedin:hover {
+  color: #249de8!important;
+}

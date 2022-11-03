@@ -1,0 +1,53 @@
+
+.login-content {
+  padding: 10px;
+  overflow: hidden;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    form {
+      text-align: center;
+      width: 400px !important;
+
+      h2 {
+        font-weight: 300;
+        line-height: 1.2;
+      }
+      .form-control:focus {
+        color: #212529;
+        background-color: #fff;
+        border-color: #86b7fe;
+        outline: 0;
+        box-shadow: 0 0 0 0.1rem rgba(42, 43, 49, 0.75);
+    }
+
+      button {
+       border-radius: 30px;
+       padding: 5px 20px;
+      }
+    }
+  }
+}
+
+
+/* start media queres  */
+
+/* start small screen */
+@media screen and (max-width:576px) {
+
+  .login-content {
+    .container {
+      form {
+        width: 250px !important;
+      }
+
+    }
+  }
+}
+/* end small screen */
+/* end media queres*/
+
+
+

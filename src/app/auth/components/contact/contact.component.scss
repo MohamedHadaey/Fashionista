@@ -1,0 +1,169 @@
+.contact-content {
+  background-color: #fff;
+  .contact-header {
+    background-color: #F2F2F2;
+    h2 {
+      font-weight: 400;
+      position: relative;
+    }
+
+    h2::after{
+      content: " ";
+      letter-spacing: 2px;
+      animation-name: typing;
+      animation-duration: 5s;
+      animation-iteration-count: infinite;
+      animation-timing-function: ease-in-out;
+  }
+
+  @keyframes typing {
+    0%{
+        content:"|"
+    }
+    5%{
+        content:" |"
+    }
+    10%{
+        content:"C |"
+    }
+    15%{
+        content:"CO |"
+    }
+    20%{
+        content:"CON |"
+    }
+    25%{
+        content:"CONT |"
+    }
+    30%{
+        content:"CONTA |"
+    }
+    35%{
+        content:"CONTAC  |"
+    }
+    40%{
+        content:"CONTACT |"
+    }
+    45%{
+        content:"CONTACT U |"
+    }
+    50%{
+        content:"CONTACT US |"
+    }
+    55%{
+        content:"CONTACT US |"
+    }
+    60%{
+        content:"CONTACT U |"
+    }
+    65%{
+        content:"CONTACT  |"
+    }
+    70%{
+        content:"CONTAC |"
+    }
+    75%{
+        content:"CONTA |"
+    }
+    80%{
+        content:"CONT |"
+    }
+    85%{
+        content:"CON |"
+    }
+    90%{
+        content:"CO |"
+    }
+    95%{
+        content:"C |"
+    }
+    100%{
+        content:" |"
+    }
+}
+  }
+
+  .contact-details {
+    h4 {
+      font-size: 2rem;
+      font-weight: 300;
+      line-height: 1.2;
+      margin-bottom: 30px;
+    }
+
+    .contact-form {
+      form {
+        .form-control:focus {
+          color: #212529;
+          background-color: #fff;
+          border-color: #86b7fe;
+          outline: 0;
+          box-shadow: 0 0 0 0.1rem rgba(42, 43, 49, 0.75);
+      }
+
+      textarea {
+        resize: none;
+      }
+        button {
+          border-radius: 30px;
+          padding: 5px 20px;
+        }
+      }
+    }
+
+    .contact-details-data {
+      ul {
+
+        li {
+          margin: 20px 0;
+
+        }
+      }
+    }
+  }
+
+
+}
+
+/* start media queres  */
+
+/* start small screen */
+@media screen and (max-width:576px) {
+  .contact-details {
+    h4 {
+      font-size: 1.5rem !important;
+      margin-bottom: 20px;
+    }
+
+    .row {
+      .col-md-6:first-of-type {
+        order: 2 !important;
+      }
+      .col-md-6:nth-of-type(2) {
+        order: 1 !important;
+      }
+    }
+  }
+}
+/* end small screen */
+/* start medium screen */
+@media screen and (min-width:577px) and (max-width:768px) {
+  .contact-details {
+    h4 {
+      font-size: 1.7rem !important;
+      margin-bottom: 25px;
+    }
+
+    .row {
+      .col-md-6:first-of-type {
+        order: 2 !important;
+      }
+      .col-md-6:nth-of-type(2) {
+        order: 1 !important;
+      }
+    }
+  }
+}
+/* end medium screen */
+
+/* end media queres*/
