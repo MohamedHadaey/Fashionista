@@ -10,13 +10,13 @@
     h2::after{
       content: " ";
       letter-spacing: 2px;
-      animation-name: typing;
+      animation-name: typingabout;
       animation-duration: 5s;
       animation-iteration-count: infinite;
       animation-timing-function: ease-in-out;
   }
 
-  @keyframes typing {
+  @keyframes typingabout {
     0%{
         content:"|"
     }

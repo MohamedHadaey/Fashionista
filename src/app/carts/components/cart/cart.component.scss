@@ -1,0 +1,14 @@
+.cart-content-empty {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  .empty-cart {
+    max-width: 500px;
+
+    img {
+      width: 100%;
+    }
+  }
+}
