@@ -1,5 +1,57 @@
-<div class="cart-content-empty py-5">
+<!-- *ngIf="cartProducts.length != 0" -->
+<div class="cart-content">
+  <div class="container py-5">
+    <div class="cartBox my-3 py-5">
+      <h1>Shopping cart</h1>
+      <div class="headercart">
+        <p class="lead">You have <label class="text-danger fw-bold">{{cartProducts.length}}</label> items in your cart</p>
+        <span class="text-danger card-header">Clear shopping cart</span>
+      </div>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Title</th>
+            <th>Price</th>
+            <th style="width: 25%;">Quantity</th>
+            <th>Total</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cart of cartProducts; let index = index">
+            <td><img [src]="cart.data.image" [alt]="cart.data.title"></td>
+            <td>{{cart.data.title}}</td>
+            <td>{{cart.data.price}} L.E</td>
+            <td>
+              <div class="quantity">
+                <button class="btn btn-dark"  min="1" max="100">+</button>
+                <input type="number" class="form-control"   min="1">
+                <button class="btn btn-dark" min="1" max="100">-</button>
+              </div>
+            </td>
+            <td>{{cart.data.price * cart.quantity}} L.E</td>
+            <td>
+              <button class="btn btn-danger" >Delete</button>
+            </td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th></th>
+            <th></th>
+            <th colspan="2" class="text-center">Total : 300 L.E</th>
+            <th colspan="2" class="text-center"><button class=" order-btn" >Order Now</button></th>
+          </tr>
+        </tfoot>
+      </table>
+      <div class="alert alert-success text-center" role="alert" *ngIf="success"><strong>Well done!</strong> Your order is successfully send</div>
+  </div>
+  </div>
+</div>
+
+<!-- <div class="cart-content-empty py-5" *ngIf="cartProducts.length == 0">
   <div class="empty-cart" *ngIf="cartProducts.length == 0">
     <img src="../../../../assets/images/shopping_cart_empty.jpg" alt="empty-cart">
   </div>
-</div>
+</div> -->

@@ -1,22 +1,45 @@
 <div class="collection-content">
+
   <div class="container">
-    <div class="row text-center py-3">
+    <div class="row py-3">
       <div class="col-12">
         <div class="collection-header">
-          <h3>Latest Products</h3>
-          <ul class="d-flex my-5 justify-content-center">
-            <li>All</li>
-            <li>Men's Clothes</li>
-            <li>Woman Clothes</li>
-            <li>Jewelery</li>
-            <li>Electronic</li>
+          <h3 class="text-center">Latest Products</h3>
+          <ul class="d-flex my-5 justify-content-center desktop-header">
+            <li (click)="getAllProducts()">All</li>
+            <li *ngFor="let category of categories" (click)="getTest($event)">{{category}}</li>
           </ul>
+          <div class="select mobile-header my-3">
+            <!-- this line contain transfer between parent and child components -->
+            <!-- select component -->
+            <app-select [data]="categories" [title]="'Categories'" (selectedValue)="filterCategories($event)"></app-select>
+          </div>
         </div>
       </div>
     </div>
+    <div class="text-center w-100 py-5 my-3" *ngIf="loading">
+      <!-- spinner component -->
+      <app-spinner></app-spinner>
+    </div>
     <div class="row">
-      <div class="col-12">
-
+      <div class="products px-4">
+        <div class="row">
+          <div class="col-sm-6 col-md-4 col-lg-3 p-2" *ngFor="let product of products">
+            <div class="product">
+              <div class="product-header text-center p-3">
+                <img [src]="product.image" alt="for test">
+                <h5 class="my-2">{{product.title}}</h5>
+              </div>
+              <div class="product-body px-3 pb-3">
+                <p>{{product.description}}</p>
+                <div class="product-buttons d-flex justify-content-between align-items-center">
+                  <button>add to Cart</button>
+                  <span>{{product.price}} $</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

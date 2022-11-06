@@ -147,7 +147,6 @@
               background-color: #c0dcf8 !important;
              }
 
-
              img{
               width: 30px !important;
               margin: 0;
@@ -190,19 +189,25 @@
     }
   }
 }
-
-@media screen and (min-width:576px) {
-  .offcanvas {
-    display: none !important;
-  }
-}
 /* end small screen */
 /* start medium screen */
 @media screen and (min-width:577px) and (max-width:768px) {
+  #canvas {
+    display: block !important;
+  }
+  .collapse, #toggler {
+    display: none;
+  }
   .navbar {
     .navbar-brand {
       font-size: 20px;
     }
+  }
+}
+
+@media screen and (min-width:768px) {
+  .offcanvas {
+    display: none !important;
   }
 }
 /* end medium screen */

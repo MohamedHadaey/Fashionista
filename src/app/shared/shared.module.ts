@@ -7,6 +7,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { SelectComponent } from './components/select/select.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { RouterModule } from '@angular/router';
     NavbarComponent,
     HeaderComponent,
     SpinnerComponent,
-    FooterComponent
+    FooterComponent,
+    SelectComponent
   ],
   imports: [
     CommonModule,
@@ -27,7 +29,8 @@ import { RouterModule } from '@angular/router';
     NavbarComponent,
     HeaderComponent,
     FooterComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    SelectComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
