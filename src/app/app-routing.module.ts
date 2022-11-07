@@ -8,14 +8,12 @@ import { CartComponent } from './carts/components/cart/cart.component';
 import { CollectionsComponent } from './products/components/collections/collections.component';
 import { DetailsComponent } from './products/components/details/details.component';
 import { HomeComponent } from './products/components/home/home.component';
-import { ProductComponent } from './products/components/product/product.component';
 
 const routes: Routes = [
   {path: "" ,redirectTo: "home",pathMatch: "full"},
   {path: "home" , component:HomeComponent},
   {path: "collections" , component:CollectionsComponent},
-  {path: "product" , component:ProductComponent},
-  {path: "details" , component:DetailsComponent},
+  {path: "details/:id" , component:DetailsComponent},
   {path: "carts" , component:CartComponent},
   {path: "login" , component:LoginComponent},
   {path: "register" , component:RegisterComponent},

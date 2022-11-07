@@ -1,11 +1,10 @@
-<!-- *ngIf="cartProducts.length != 0" -->
-<div class="cart-content">
+<div class="cart-content" *ngIf="cartProducts.length != 0">
   <div class="container py-5">
     <div class="cartBox my-3 py-5">
       <h1>Shopping cart</h1>
       <div class="headercart">
         <p class="lead">You have <label class="text-danger fw-bold">{{cartProducts.length}}</label> items in your cart</p>
-        <span class="text-danger card-header">Clear shopping cart</span>
+        <span class="text-danger card-header" (click)="clearCart()">Clear shopping cart</span>
       </div>
       <table class="table table-striped">
         <thead>
@@ -25,14 +24,14 @@
             <td>{{cart.data.price}} L.E</td>
             <td>
               <div class="quantity">
-                <button class="btn btn-dark"  min="1" max="100">+</button>
-                <input type="number" class="form-control"   min="1">
-                <button class="btn btn-dark" min="1" max="100">-</button>
+                <button class="btn btn-dark" (click)="plusAmount(index)" min="1" max="100">+</button>
+                <input type="number" class="form-control" (change)="detectAmountChange()" [(ngModel)]="cart.quantity" min="1">
+                <button class="btn btn-dark" (click)="minsAmount(index)" min="1" max="100">-</button>
               </div>
             </td>
-            <td>{{cart.data.price * cart.quantity}} L.E</td>
+            <td>{{(cart.data.price * cart.quantity) | number }} &dollar;</td>
             <td>
-              <button class="btn btn-danger" >Delete</button>
+              <button class="btn btn-danger" (click)="deleteProduct(index)">Delete</button>
             </td>
           </tr>
         </tbody>
@@ -40,8 +39,8 @@
           <tr>
             <th></th>
             <th></th>
-            <th colspan="2" class="text-center">Total : 300 L.E</th>
-            <th colspan="2" class="text-center"><button class=" order-btn" >Order Now</button></th>
+            <th colspan="2" class="text-center">Total : {{total}} L.E</th>
+            <th colspan="2" class="text-center"><button class=" order-btn" (click)="orderCart()">Order Now</button></th>
           </tr>
         </tfoot>
       </table>
@@ -50,8 +49,8 @@
   </div>
 </div>
 
-<!-- <div class="cart-content-empty py-5" *ngIf="cartProducts.length == 0">
+<div class="cart-content-empty py-5" *ngIf="cartProducts.length == 0">
   <div class="empty-cart" *ngIf="cartProducts.length == 0">
     <img src="../../../../assets/images/shopping_cart_empty.jpg" alt="empty-cart">
   </div>
-</div> -->
+</div>

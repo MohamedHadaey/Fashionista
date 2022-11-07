@@ -1,4 +1,28 @@
-
-<div class="w-100 vh-100 bg-primary d-flex justify-content-center align-items-center text-light">
-  <h1>Details components</h1>
+<div class="details-content py-5 ">
+  <div class="container">
+    <div class="row" *ngIf="!loading">
+      <div class="col-sm-12 col-md-5">
+        <div class="product-img">
+          <img [src]="product.image" [alt]="product.title">
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-7">
+        <div class="product-info">
+          <ul class="list-unstyled">
+            <li><h3 class="text-info">{{product.title}}</h3></li>
+            <li><h4>{{product.category}}</h4></li>
+            <li><p>{{product.description}}</p></li>
+            <li><strong>Rate : </strong><span>{{product.rating.rate}}</span></li>
+            <li><strong>Product Number : </strong>{{product.rating.count}}</li>
+            <li><strong>Price : </strong>{{product.price}} &dollar;</li>
+            <li><button class="add-remove-btn" >Add To Cart</button></li>
+            <li><button class="add-remove-btn" >Remove From Cart</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="text-center">
+      <app-spinner *ngIf="loading"></app-spinner>
+    </div>
+  </div>
 </div>

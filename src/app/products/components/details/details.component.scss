@@ -1,0 +1,157 @@
+.details-content{
+  background-color: #fff;
+
+
+  .product-img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+    img {
+      width: 300px;
+    }
+  }
+
+  .product-info {
+    ul{
+      li{
+        font-size: 22px;
+        margin: 20px 0;
+        strong {
+          color: #555;
+          font-weight: 600;
+        }
+
+        .add-remove-btn {
+          color: #fff;
+          border: 1px solid #000;
+          background-color: #000;
+          font-weight: 400;
+          padding: 3px 6px;
+          border-radius: 5px;
+          transition: all 0.3s;
+          font-size: 14px;
+
+
+          &:hover {
+            color: #000;
+            border: 1px solid #000;
+            background-color: #fff;
+          }
+        }
+      }
+
+      li:nth-of-type(3) {
+        p {
+          font-size: 16px;
+          color: #555;
+        }
+      }
+      li:nth-of-type(4) {
+        span {
+          color: #000;
+          background-color: gold;
+          padding: 1px 5px;
+          border-radius: 5px;
+        }
+      }
+    }
+  }
+
+}
+
+
+/* start media queres  */
+
+/* start small screen */
+@media screen and (max-width:576px) {
+  .details-content{
+
+    .product-img {
+
+      img {
+        width: 200px;
+      }
+    }
+
+    .product-info {
+      ul{
+        li{
+          font-size: 18px;
+          strong {
+            font-weight: 500;
+            color: #000;
+          }
+
+        }
+
+        li:first-of-type {
+          h3 {
+            font-size: 20px;
+          }
+        }
+        li:nth-of-type(2) {
+          h4 {
+            font-size: 18px;
+          }
+        }
+        li:nth-of-type(3) {
+          p {
+            font-size: 16px;
+          }
+        }
+        li:nth-of-type(4) {
+          span {
+            padding: 1px 5px;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+/* end small screen */
+/* start medium screen */
+@media screen and (min-width:577px) and (max-width:768px) {
+  .details-content{
+
+    .product-img {
+
+      img {
+        width: 200px;
+      }
+    }
+  }
+}
+/* end medium screen */
+/* start large screen */
+@media screen and (min-width:769px) and (max-width:992px) {
+  .details-content{
+
+    .product-img {
+
+      img {
+        width: 220px;
+      }
+    }
+  }
+}
+/* end large screen */
+/* start extra large screen */
+@media screen and (min-width:993px) and (max-width:1200px) {
+
+}
+/* end axtra large screen */
+/* start extra extra large screen */
+@media screen and (min-width:1201px) and (max-width:1400px) {
+
+}
+/* end extra extra large screen */
+
+/* end media queres*/
+
+

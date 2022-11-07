@@ -8,21 +8,26 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root',
 })
 export class ProductsService {
-  baseUrl:any="https://fakestoreapi.com/"
+  // baseUrl:any="https://fakestoreapi.com/"
   constructor(private http: HttpClient) {}
 
   // 1- get all products
   getAllProducts(): Observable<any> {
-    return this.http.get(`${this.baseUrl}products`);
+    return this.http.get(`${environment.baseUrl}products`);
   }
 
   // 2- get all categories
   getAllCategories(): Observable<any> {
-    return this.http.get(`${this.baseUrl}products/categories`);
+    return this.http.get(`${environment.baseUrl}products/categories`);
   }
 
    // 3- get specific category
    getSpecificCategory(value:any): Observable<any>{
-    return this.http.get(`${this.baseUrl}products/category/${value}`)
+    return this.http.get(`${environment.baseUrl}products/category/${value}`)
   }
+
+    // get single product details
+    getProductDetails(id:number): Observable<any>{
+      return this.http.get(`${environment.baseUrl}products/${id}`)
+    }
 }

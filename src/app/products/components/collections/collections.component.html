@@ -7,7 +7,7 @@
           <h3 class="text-center">Latest Products</h3>
           <ul class="d-flex my-5 justify-content-center desktop-header">
             <li (click)="getAllProducts()">All</li>
-            <li *ngFor="let category of categories" (click)="getTest($event)">{{category}}</li>
+            <li *ngFor="let category of categories" (click)="getProductsOfCategory($event)">{{category}}</li>
           </ul>
           <div class="select mobile-header my-3">
             <!-- this line contain transfer between parent and child components -->
@@ -25,19 +25,25 @@
       <div class="products px-4">
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3 p-2" *ngFor="let product of products">
-            <div class="product">
+            <!-- product component -->
+           <app-product [data]="product" (item)="addToCart($event)"></app-product>
+            <!-- <div class="product">
               <div class="product-header text-center p-3">
-                <img [src]="product.image" alt="for test">
+                <img [src]="product.image" [alt]="product.title" routerLink="/details/{{product.id}}">
                 <h5 class="my-2">{{product.title}}</h5>
               </div>
               <div class="product-body px-3 pb-3">
                 <p>{{product.description}}</p>
                 <div class="product-buttons d-flex justify-content-between align-items-center">
-                  <button>add to Cart</button>
+                  <button *ngIf="!addButton" (click)="addButton = true"> add to Cart</button>
+                  <div class="w-50 d-flex" *ngIf="addButton">
+                    <input type="number" class="form-control" [(ngModel)]="amount">
+                    <button class="btn btn-danger ms-2 text-center" (click)="addButton = false">Add</button>
+                  </div>
                   <span>{{product.price}} $</span>
                 </div>
               </div>
-            </div>
+            </div> -->
           </div>
         </div>
       </div>
