@@ -4,24 +4,20 @@ import { product } from '../../../model/product';
 @Component({
   selector: 'app-product',
   templateUrl: './product.component.html',
-  styleUrls: ['./product.component.scss']
+  styleUrls: ['./product.component.scss'],
 })
 export class ProductComponent implements OnInit {
-  @Input() data!:product;
+  @Input() data!: product;
   @Output() item = new EventEmitter();
-  addButton:boolean=false;
-  amount:number=1;
-  constructor() { }
+  addButton: boolean = false;
+  amount: number = 1;
 
-  ngOnInit(): void {
+  constructor() {}
+
+  ngOnInit(): void {}
+
+  // send item clicked and amout to parent
+  add() {
+    this.item.emit({ data: this.data, quantity: this.amount });
   }
-
-   // send item clicked and amout to parent
-   add(){
-    this.item.emit({data:this.data , quantity:this.amount});
-    }
-
-    added(){
-      localStorage.setItem("added" , "true")
-    }
 }

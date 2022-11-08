@@ -73,27 +73,27 @@ export class CartComponent implements OnInit {
     }
 
       // order your cart
-  orderCart(){
-    let products = this.cartProducts.map((item) => {
-      return {productId: item.data.id, quantity:item.quantity}
-    })
+      orderCart(){
+        let products = this.cartProducts.map((item) => {
+          return {productId: item.data.id, quantity:item.quantity}
+        })
 
-    let model = {
-      userId:5,
-      date: new Date(),
-      products:products
-    }
+        let model = {
+          userId:5,
+          date: new Date(),
+          products:products
+        }
 
-    if(this.success == false){
-      this._CartsService.orderYourCart(model).subscribe((response) => {
-        this.success = true
-      } , (error) => {
-        alert("Failed to order your cart!")
-      })
-    }else{
-      alert("You have been already ordered you cart")
-    }
+        if(this.success == false){
+          this._CartsService.orderYourCart(model).subscribe((response) => {
+            this.success = true
+          } , (error) => {
+            alert("Failed to order your cart!")
+          })
+        }else{
+          alert("You have been already ordered you cart")
+        }
 
-  }
+      }
 
 }

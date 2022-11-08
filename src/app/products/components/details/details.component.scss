@@ -1,6 +1,6 @@
-.details-content{
+.details-content {
   background-color: #fff;
-
+  min-height: 50vh;
 
   .product-img {
     width: 100%;
@@ -16,10 +16,11 @@
   }
 
   .product-info {
-    ul{
-      li{
+    ul {
+      li {
         font-size: 22px;
         margin: 20px 0;
+
         strong {
           color: #555;
           font-weight: 600;
@@ -50,6 +51,7 @@
           color: #555;
         }
       }
+
       li:nth-of-type(4) {
         span {
           color: #000;
@@ -68,7 +70,7 @@
 
 /* start small screen */
 @media screen and (max-width:576px) {
-  .details-content{
+  .details-content {
 
     .product-img {
 
@@ -78,9 +80,10 @@
     }
 
     .product-info {
-      ul{
-        li{
+      ul {
+        li {
           font-size: 18px;
+
           strong {
             font-weight: 500;
             color: #000;
@@ -93,16 +96,19 @@
             font-size: 20px;
           }
         }
+
         li:nth-of-type(2) {
           h4 {
             font-size: 18px;
           }
         }
+
         li:nth-of-type(3) {
           p {
             font-size: 16px;
           }
         }
+
         li:nth-of-type(4) {
           span {
             padding: 1px 5px;
@@ -117,7 +123,7 @@
 /* end small screen */
 /* start medium screen */
 @media screen and (min-width:577px) and (max-width:768px) {
-  .details-content{
+  .details-content {
 
     .product-img {
 
@@ -127,10 +133,11 @@
     }
   }
 }
+
 /* end medium screen */
 /* start large screen */
 @media screen and (min-width:769px) and (max-width:992px) {
-  .details-content{
+  .details-content {
 
     .product-img {
 
@@ -140,18 +147,15 @@
     }
   }
 }
+
 /* end large screen */
 /* start extra large screen */
-@media screen and (min-width:993px) and (max-width:1200px) {
+@media screen and (min-width:993px) and (max-width:1200px) {}
 
-}
 /* end axtra large screen */
 /* start extra extra large screen */
-@media screen and (min-width:1201px) and (max-width:1400px) {
+@media screen and (min-width:1201px) and (max-width:1400px) {}
 
-}
 /* end extra extra large screen */
 
 /* end media queres*/
-
-

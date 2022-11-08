@@ -1,5 +1,4 @@
 <div class="collection-content">
-
   <div class="container">
     <div class="row py-3">
       <div class="col-12">
@@ -12,7 +11,8 @@
           <div class="select mobile-header my-3">
             <!-- this line contain transfer between parent and child components -->
             <!-- select component -->
-            <app-select [data]="categories" [title]="'Categories'" (selectedValue)="filterCategories($event)"></app-select>
+            <app-select [data]="categories" [title]="'Categories'" (selectedValue)="filterCategories($event)">
+            </app-select>
           </div>
         </div>
       </div>
@@ -26,24 +26,7 @@
         <div class="row">
           <div class="col-sm-6 col-md-4 col-lg-3 p-2" *ngFor="let product of products">
             <!-- product component -->
-           <app-product [data]="product" (item)="addToCart($event)"></app-product>
-            <!-- <div class="product">
-              <div class="product-header text-center p-3">
-                <img [src]="product.image" [alt]="product.title" routerLink="/details/{{product.id}}">
-                <h5 class="my-2">{{product.title}}</h5>
-              </div>
-              <div class="product-body px-3 pb-3">
-                <p>{{product.description}}</p>
-                <div class="product-buttons d-flex justify-content-between align-items-center">
-                  <button *ngIf="!addButton" (click)="addButton = true"> add to Cart</button>
-                  <div class="w-50 d-flex" *ngIf="addButton">
-                    <input type="number" class="form-control" [(ngModel)]="amount">
-                    <button class="btn btn-danger ms-2 text-center" (click)="addButton = false">Add</button>
-                  </div>
-                  <span>{{product.price}} $</span>
-                </div>
-              </div>
-            </div> -->
+            <app-product [data]="product" (item)="addToCart($event)"></app-product>
           </div>
         </div>
       </div>

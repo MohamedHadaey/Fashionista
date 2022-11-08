@@ -1,86 +1,108 @@
 .contact-content {
   background-color: #fff;
+
   .contact-header {
     background-color: #F2F2F2;
+
     h2 {
       font-weight: 400;
       position: relative;
     }
 
-    h2::after{
+    h2::after {
       content: " ";
       letter-spacing: 2px;
       animation-name: typingcontact;
       animation-duration: 5s;
       animation-iteration-count: infinite;
       animation-timing-function: ease-in-out;
-  }
+    }
 
-  @keyframes typingcontact {
-    0%{
-        content:"|"
+    @keyframes typingcontact {
+      0% {
+        content: "|"
+      }
+
+      5% {
+        content: " |"
+      }
+
+      10% {
+        content: "C |"
+      }
+
+      15% {
+        content: "CO |"
+      }
+
+      20% {
+        content: "CON |"
+      }
+
+      25% {
+        content: "CONT |"
+      }
+
+      30% {
+        content: "CONTA |"
+      }
+
+      35% {
+        content: "CONTAC  |"
+      }
+
+      40% {
+        content: "CONTACT |"
+      }
+
+      45% {
+        content: "CONTACT U |"
+      }
+
+      50% {
+        content: "CONTACT US |"
+      }
+
+      55% {
+        content: "CONTACT US |"
+      }
+
+      60% {
+        content: "CONTACT U |"
+      }
+
+      65% {
+        content: "CONTACT  |"
+      }
+
+      70% {
+        content: "CONTAC |"
+      }
+
+      75% {
+        content: "CONTA |"
+      }
+
+      80% {
+        content: "CONT |"
+      }
+
+      85% {
+        content: "CON |"
+      }
+
+      90% {
+        content: "CO |"
+      }
+
+      95% {
+        content: "C |"
+      }
+
+      100% {
+        content: " |"
+      }
     }
-    5%{
-        content:" |"
-    }
-    10%{
-        content:"C |"
-    }
-    15%{
-        content:"CO |"
-    }
-    20%{
-        content:"CON |"
-    }
-    25%{
-        content:"CONT |"
-    }
-    30%{
-        content:"CONTA |"
-    }
-    35%{
-        content:"CONTAC  |"
-    }
-    40%{
-        content:"CONTACT |"
-    }
-    45%{
-        content:"CONTACT U |"
-    }
-    50%{
-        content:"CONTACT US |"
-    }
-    55%{
-        content:"CONTACT US |"
-    }
-    60%{
-        content:"CONTACT U |"
-    }
-    65%{
-        content:"CONTACT  |"
-    }
-    70%{
-        content:"CONTAC |"
-    }
-    75%{
-        content:"CONTA |"
-    }
-    80%{
-        content:"CONT |"
-    }
-    85%{
-        content:"CON |"
-    }
-    90%{
-        content:"CO |"
-    }
-    95%{
-        content:"C |"
-    }
-    100%{
-        content:" |"
-    }
-}
   }
 
   .contact-details {
@@ -99,11 +121,12 @@
           border-color: #86b7fe;
           outline: 0;
           box-shadow: 0 0 0 0.1rem rgba(42, 43, 49, 0.75);
-      }
+        }
 
-      textarea {
-        resize: none;
-      }
+        textarea {
+          resize: none;
+        }
+
         button {
           border-radius: 30px;
           padding: 5px 20px;
@@ -139,12 +162,14 @@
       .col-md-6:first-of-type {
         order: 2 !important;
       }
+
       .col-md-6:nth-of-type(2) {
         order: 1 !important;
       }
     }
   }
 }
+
 /* end small screen */
 /* start medium screen */
 @media screen and (min-width:577px) and (max-width:768px) {
@@ -158,12 +183,14 @@
       .col-md-6:first-of-type {
         order: 2 !important;
       }
+
       .col-md-6:nth-of-type(2) {
         order: 1 !important;
       }
     }
   }
 }
+
 /* end medium screen */
 
 /* end media queres*/
