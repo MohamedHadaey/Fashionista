@@ -1,9 +1,10 @@
 <div class="cart-content" *ngIf="cartProducts.length != 0">
   <div class="container py-5">
-    <div class="cartBox my-3 py-5">
+    <div class="cartBox-desk my-3 py-5">
       <h1>Shopping cart</h1>
       <div class="headercart">
-        <p class="lead">You have <label class="text-danger fw-bold">{{cartProducts.length}}</label> items in your cart</p>
+        <p class="lead">You have <label class="text-danger fw-bold">{{cartProducts.length}}</label> items in your cart
+        </p>
         <span class="text-danger card-header" (click)="clearCart()">Clear shopping cart</span>
       </div>
       <table class="table table-striped">
@@ -20,12 +21,17 @@
         <tbody>
           <tr *ngFor="let cart of cartProducts; let index = index">
             <td><img [src]="cart.data.image" [alt]="cart.data.title"></td>
-            <td>{{cart.data.title}}</td>
-            <td>{{cart.data.price}} L.E</td>
+            <td>
+              <p>{{cart.data.title}}</p>
+            </td>
+            <td>
+              <p>{{cart.data.price}} L.E</p>
+            </td>
             <td>
               <div class="quantity">
                 <button class="btn btn-dark" (click)="plusAmount(index)" min="1" max="100">+</button>
-                <input type="number" class="form-control" (change)="detectAmountChange()" [(ngModel)]="cart.quantity" min="1">
+                <input type="number" class="form-control" (change)="detectAmountChange()" [(ngModel)]="cart.quantity"
+                  min="1">
                 <button class="btn btn-dark" (click)="minsAmount(index)" min="1" max="100">-</button>
               </div>
             </td>
@@ -44,11 +50,51 @@
           </tr>
         </tfoot>
       </table>
-      <div class="alert alert-success text-center" role="alert" *ngIf="success"><strong>Well done!</strong> Your order is successfully send</div>
-  </div>
+      <div class="alert alert-success text-center" role="alert" *ngIf="success"><strong>Well done!</strong> Your order
+        is successfully send</div>
+    </div>
+    <div class="cartBox-mob my-3 py-5">
+      <h1>Shopping cart</h1>
+      <div class="headercart">
+        <p class="lead">You have <label class="text-danger fw-bold">{{cartProducts.length}}</label> items in your cart
+        </p>
+        <span class="text-danger card-header" (click)="clearCart()">Clear shopping cart</span>
+      </div>
+      <div class="line"></div>
+      <div class="row">
+        <div class="col-12" *ngFor="let cart of cartProducts; let index = index">
+          <div class="row py-3">
+            <div class="col-4 d-flex justify-content-center align-items-center">
+              <img [src]="cart.data.image" [alt]="cart.data.title">
+            </div>
+            <div class="col-8 text-center">
+              <p>{{cart.data.title}}</p>
+              <p>{{cart.data.price}} L.E</p>
+              <div class="quantity">
+                <button class="btn btn-dark" (click)="plusAmount(index)" min="1" max="100">+</button>
+                <input type="number" class="form-control" (change)="detectAmountChange()" [(ngModel)]="cart.quantity"
+                  min="1">
+                <button class="btn btn-dark" (click)="minsAmount(index)" min="1" max="100">-</button>
+              </div>
+              <div class="total w-100 d-flex justify-content-between align-items-center py-3">
+                <p>{{(cart.data.price * cart.quantity) | number }} &dollar;</p>
+                <button class="btn btn-danger" (click)="deleteProduct(index)">Delete</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 d-flex justify-content-between align-items-center last">
+          <p>Total : {{total}} L.E</p>
+          <button class=" order-btn" (click)="orderCart()">Order Now</button>
+        </div>
+        <div class="col-10 m-auto">
+          <div class="alert alert-success text-center my-3" role="alert" *ngIf="success"><strong>Well done!</strong>
+            Your order is successfully send</div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-
 <div class="cart-content-empty py-5" *ngIf="cartProducts.length == 0">
   <div class="empty-cart" *ngIf="cartProducts.length == 0">
     <img src="../../../../assets/images/shopping_cart_empty.jpg" alt="empty-cart">
