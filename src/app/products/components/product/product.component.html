@@ -9,7 +9,7 @@
       <button *ngIf="!addButton" (click)="addButton = true"> add to Cart</button>
       <div class="w-50 d-flex" *ngIf="addButton">
         <input type="number" class="form-control" [(ngModel)]="amount">
-        <button  (click)="add();added();addButton = false">Add</button>
+        <button (click)="add();added();addButton = false">Add</button>
       </div>
       <span>{{data.price}} $</span>
     </div>

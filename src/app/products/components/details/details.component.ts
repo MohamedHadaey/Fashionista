@@ -5,30 +5,36 @@ import { ProductsService } from '../../services/products.service';
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
-  styleUrls: ['./details.component.scss']
+  styleUrls: ['./details.component.scss'],
 })
 export class DetailsComponent implements OnInit {
-  product:any={};
+  product: any = {};
   // this ( ! ) => if you didn't want to initialize the varaible
-  productId!:number;
-  loading:boolean = false;
-  added :any = localStorage.getItem("added")
-  constructor(private _ActivatedRoute:ActivatedRoute, private _ProductsService:ProductsService) { }
+  productId!: number;
+  loading: boolean = false;
+  added: any = localStorage.getItem('added');
+  constructor(
+    private _ActivatedRoute: ActivatedRoute,
+    private _ProductsService: ProductsService
+  ) {}
 
   ngOnInit(): void {
-    this.productId = this._ActivatedRoute.snapshot.params?.["id"];
+    this.productId = this._ActivatedRoute.snapshot.params?.['id'];
     this.getDetails();
   }
 
   // get details of product
-  getDetails(){
+  getDetails() {
     this.loading = true;
-    this._ProductsService.getProductDetails(this.productId).subscribe((response) => {
-      this.product = response
-      this.loading = false;
-      } , (error) => {
+    this._ProductsService.getProductDetails(this.productId).subscribe(
+      (response) => {
+        this.product = response;
+        this.loading = false;
+      },
+      (error) => {
         this.loading = false;
         alert(error);
-    })
+      }
+    );
   }
 }

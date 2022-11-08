@@ -1,10 +1,9 @@
-
 .cart-content {
   min-height: 50vh;
 }
 
 // styles for desktop size
-.cartBox-desk{
+.cartBox-desk {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 0 20px;
@@ -14,13 +13,15 @@
     color: #555;
   }
 
-  .table{
-    .quantity{
+  .table {
+    .quantity {
       display: flex;
       justify-content: space-between;
-      input{
+
+      input {
         margin: 0 20px;
       }
+
       input[type=number]::-webkit-inner-spin-button,
       input[type=number]::-webkit-outer-spin-button {
         appearance: none;
@@ -30,15 +31,18 @@
         appearance: textfield;
       }
     }
-    tbody{
-      border-top : 1px solid #c61d21;
+
+    tbody {
+      border-top: 1px solid #c61d21;
       border-radius: 1px solid #c61d21;
-      tr{
-        td{
+
+      tr {
+        td {
           border-bottom: 0;
           text-align: center;
           vertical-align: middle;
-          img{
+
+          img {
             width: 80px;
             height: 80px;
             border-radius: 10px;
@@ -46,7 +50,7 @@
         }
       }
 
-      input{
+      input {
         text-align: center;
       }
     }
@@ -94,22 +98,27 @@
 }
 
 // styles for mobile size
-.cartBox-mob{
+.cartBox-mob {
   display: none;
+
   h1 {
     color: #555;
     font-size: 25px;
   }
+
   .headercart {
     text-align: center;
+
     p {
       margin: 5px;
       font-size: 16px;
     }
+
     span {
       font-size: 14px;
     }
   }
+
   .line {
     width: 75%;
     height: 2px;
@@ -120,14 +129,17 @@
   .row {
     .col-12 {
       border-bottom: 1px solid #aaa;
+
       .row {
         img {
           width: 100%;
           border-radius: 15px;
         }
+
         p {
           font-size: 14px;
         }
+
         p:nth-of-type(2) {
           background-color: gold;
           width: fit-content;
@@ -135,15 +147,18 @@
           margin: auto;
           padding: 5px 10px;
         }
-        .quantity{
+
+        .quantity {
           display: flex;
           justify-content: center;
           align-items: center;
           flex-direction: row;
           margin: 10px 0;
-          input{
+
+          input {
             margin: 0 20px;
           }
+
           input[type=number]::-webkit-inner-spin-button,
           input[type=number]::-webkit-outer-spin-button {
             appearance: none;
@@ -152,6 +167,7 @@
           input[type=number] {
             appearance: textfield;
           }
+
           .form-control:focus {
             color: #212529;
             background-color: #fff;
@@ -161,10 +177,12 @@
           }
 
         }
+
         .total {
           p {
             padding-top: 10px;
           }
+
           button {
             font-size: 14px;
           }
@@ -172,7 +190,8 @@
 
       }
     }
-    .last{
+
+    .last {
       border: none;
       padding-top: 20px;
 
@@ -207,6 +226,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
+
   .empty-cart {
     max-width: 500px;
 
@@ -225,10 +245,11 @@
 
 /* start small screen */
 @media screen and (max-width:576px) {
-  .cartBox-desk{
+  .cartBox-desk {
     display: none;
   }
-  .cartBox-mob{
+
+  .cartBox-mob {
     display: block;
   }
 }
@@ -236,17 +257,19 @@
 /* end small screen */
 /* start medium screen */
 @media screen and (min-width:577px) and (max-width:768px) {
-  .cartBox-desk{
+  .cartBox-desk {
     display: none;
   }
-  .cartBox-mob{
+
+  .cartBox-mob {
     display: block;
   }
 }
+
 /* end medium screen */
 /* start large screen */
 @media screen and (min-width:769px) and (max-width:992px) {
-  .cartBox-desk{
+  .cartBox-desk {
     padding: 0 10px;
     margin: 40px 0;
 
@@ -254,17 +277,18 @@
       font-size: 30px;
     }
 
-    .table{
-      .quantity{
-        input{
+    .table {
+      .quantity {
+        input {
           margin: 0 10px;
         }
       }
-      tbody{
-        tr{
-          td{
 
-            img{
+      tbody {
+        tr {
+          td {
+
+            img {
               width: 60px;
               height: 60px;
               border-radius: 10px;
@@ -291,17 +315,15 @@
     }
   }
 }
+
 /* end large screen */
 /* start extra large screen */
-@media screen and (min-width:993px) and (max-width:1200px) {
+@media screen and (min-width:993px) and (max-width:1200px) {}
 
-}
 /* end axtra large screen */
 /* start extra extra large screen */
-@media screen and (min-width:1201px) and (max-width:1400px) {
+@media screen and (min-width:1201px) and (max-width:1400px) {}
 
-}
 /* end extra extra large screen */
 
 /* end media queres*/
-

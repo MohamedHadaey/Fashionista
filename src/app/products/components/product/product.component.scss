@@ -8,7 +8,6 @@
   &:hover {
     cursor: pointer;
     transform: scale(1.02);
-
   }
 
   .product-header {
@@ -33,7 +32,8 @@
     }
 
     .product-buttons {
-      div{
+      div {
+
         input[type=number]::-webkit-inner-spin-button,
         input[type=number]::-webkit-outer-spin-button {
           appearance: none;
@@ -43,27 +43,28 @@
           appearance: textfield;
           margin-right: 5px !important;
         }
+
         .form-control:focus {
           color: #212529;
           background-color: #fff;
           border-color: #86b7fe;
           outline: 0;
           box-shadow: 0 0 0 0.1rem rgba(42, 43, 49, 0.75);
-      }
+        }
       }
 
       button {
-       background-color: transparent;
-       border: 1px solid #000;
-       border-radius: 5px;
-       padding: 3px 5px;
-       transition: all 0.3s;
+        background-color: transparent;
+        border: 1px solid #000;
+        border-radius: 5px;
+        padding: 3px 5px;
+        transition: all 0.3s;
 
-       &:hover {
-        color: #fff;
-        background-color: #000;
+        &:hover {
+          color: #fff;
+          background-color: #000;
 
-       }
+        }
       }
 
       span {

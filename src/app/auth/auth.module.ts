@@ -7,7 +7,6 @@ import { ContactComponent } from './components/contact/contact.component';
 import { RouterModule } from '@angular/router';
 import {  ReactiveFormsModule } from '@angular/forms';
 
-
 @NgModule({
   declarations: [
     LoginComponent,

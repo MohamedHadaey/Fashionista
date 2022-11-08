@@ -19,14 +19,12 @@
 /* the handle style */
 ::-webkit-scrollbar-track {
   background-color: #eee;
-
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: var(--scrollBarBg);
   border-radius: 15px;
 }
-
 
 body {
   background-color:rgb(242, 242, 242) !important;

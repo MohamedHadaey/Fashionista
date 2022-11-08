@@ -1,86 +1,108 @@
 .about-us-content {
   background-color: #fff;
+
   .aboutus-header {
     background-color: #F2F2F2;
+
     h2 {
       font-weight: 400;
       position: relative;
     }
 
-    h2::after{
+    h2::after {
       content: " ";
       letter-spacing: 2px;
       animation-name: typingabout;
       animation-duration: 5s;
       animation-iteration-count: infinite;
       animation-timing-function: ease-in-out;
-  }
+    }
 
-  @keyframes typingabout {
-    0%{
-        content:"|"
+    @keyframes typingabout {
+      0% {
+        content: "|"
+      }
+
+      5% {
+        content: " |"
+      }
+
+      10% {
+        content: "A |"
+      }
+
+      15% {
+        content: "AB |"
+      }
+
+      20% {
+        content: "ABO |"
+      }
+
+      25% {
+        content: "ABOU |"
+      }
+
+      30% {
+        content: "ABOUT |"
+      }
+
+      35% {
+        content: "ABOUT  |"
+      }
+
+      40% {
+        content: "ABOUT U |"
+      }
+
+      45% {
+        content: "ABOUT US |"
+      }
+
+      50% {
+        content: "ABOUT US |"
+      }
+
+      55% {
+        content: "ABOUT U |"
+      }
+
+      60% {
+        content: "ABOUT  |"
+      }
+
+      65% {
+        content: "ABOUT |"
+      }
+
+      70% {
+        content: "ABOU |"
+      }
+
+      75% {
+        content: "ABO |"
+      }
+
+      80% {
+        content: "AB |"
+      }
+
+      85% {
+        content: "A |"
+      }
+
+      90% {
+        content: "A |"
+      }
+
+      95% {
+        content: "|"
+      }
+
+      100% {
+        content: " |"
+      }
     }
-    5%{
-        content:" |"
-    }
-    10%{
-        content:"A |"
-    }
-    15%{
-        content:"AB |"
-    }
-    20%{
-        content:"ABO |"
-    }
-    25%{
-        content:"ABOU |"
-    }
-    30%{
-        content:"ABOUT |"
-    }
-    35%{
-        content:"ABOUT  |"
-    }
-    40%{
-        content:"ABOUT U |"
-    }
-    45%{
-        content:"ABOUT US |"
-    }
-    50%{
-        content:"ABOUT US |"
-    }
-    55%{
-        content:"ABOUT U |"
-    }
-    60%{
-        content:"ABOUT  |"
-    }
-    65%{
-        content:"ABOUT |"
-    }
-    70%{
-        content:"ABOU |"
-    }
-    75%{
-        content:"ABO |"
-    }
-    80%{
-        content:"AB |"
-    }
-    85%{
-        content:"A |"
-    }
-    90%{
-        content:"A |"
-    }
-    95%{
-        content:"|"
-    }
-    100%{
-        content:" |"
-    }
-}
   }
 
   .aboutus-details {
@@ -114,7 +136,7 @@
           left: 0;
           width: 100%;
           height: 100%;
-          background-color: rgba(70,74,77,.7);
+          background-color: rgba(70, 74, 77, .7);
           color: #fff;
           transition: all 1s;
 
@@ -125,15 +147,17 @@
 
           p {
             margin-top: 10px;
-            color: #bcb8b8!important;
+            color: #bcb8b8 !important;
           }
 
           ul {
             padding: 0;
+
             li {
               margin: 5px 10px;
               font-size: 18px;
-              span i{
+
+              span i {
                 transition: color 0.4s;
               }
             }
@@ -144,6 +168,7 @@
           .layer {
             top: 0;
           }
+
           cursor: pointer;
         }
       }

@@ -1,7 +1,7 @@
-
 .login-content {
   padding: 10px;
   overflow: hidden;
+
   .container {
     display: flex;
     justify-content: center;
@@ -15,17 +15,18 @@
         font-weight: 300;
         line-height: 1.2;
       }
+
       .form-control:focus {
         color: #212529;
         background-color: #fff;
         border-color: #86b7fe;
         outline: 0;
         box-shadow: 0 0 0 0.1rem rgba(42, 43, 49, 0.75);
-    }
+      }
 
       button {
-       border-radius: 30px;
-       padding: 5px 20px;
+        border-radius: 30px;
+        padding: 5px 20px;
       }
     }
   }
@@ -46,8 +47,6 @@
     }
   }
 }
+
 /* end small screen */
 /* end media queres*/
-
-
-

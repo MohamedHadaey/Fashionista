@@ -1,6 +1,7 @@
 .footer-content {
   background-color: #DCDCDA;
   overflow: hidden;
+
   .row {
     .list {
       h4 {
@@ -12,6 +13,7 @@
 
       p {
         color: #666;
+
         a {
           text-decoration: underline;
           color: #555;
@@ -29,7 +31,8 @@
           color: #666;
           margin: 15px 0;
           transition: all 0.4s;
-          &:hover{
+
+          &:hover {
             cursor: pointer;
           }
         }
@@ -50,7 +53,7 @@
           font-size: 25px;
 
           span {
-            i{
+            i {
               color: #000;
               transition: color 0.3s;
             }
@@ -63,11 +66,10 @@
   }
 
   .row:first-of-type {
-    border-bottom: 1px solid  #8888;
+    border-bottom: 1px solid #8888;
     margin-bottom: 20px;
   }
 }
-
 
 @media screen and (max-width:576px) {
   .footer-content {
